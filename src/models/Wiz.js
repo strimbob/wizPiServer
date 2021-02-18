@@ -13,6 +13,10 @@ const WixParams = {
   dimming: 100,
 };
 export class WixParmas extends Record(WixParams) {
+  static fromData(data) {
+    return new WixParmas({ ...data }).setRandomColor();
+  }
+
   getRandomValue() {
     return parseInt(Math.random() * 255);
   }
@@ -32,12 +36,17 @@ const WixData = {
   env: 'pro',
   ip: '192.168.0.117',
   port: 38899,
-  params: new WixParmas(),
+  params: null,
 };
 
 export class Wiz extends Record(WixData) {
   static fromData(data) {
-    return new Wiz({ data });
+    let params = null;
+    if (data.params) {
+      params = WixParmas.fromData(data.params);
+    }
+
+    return new Wiz({ ...data, params });
   }
   setParams(params) {
     return this.set('params', params);

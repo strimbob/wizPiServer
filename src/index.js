@@ -4,9 +4,9 @@ import path, { resolve } from 'path';
 import cors from 'cors';
 import { config } from 'dotenv';
 
-import { bashIt } from './wiz/wiz';
+import { bashIt, findIpAddress } from './wiz/wiz';
 const PORT = process.env.PORT || 5000;
-
+findIpAddress();
 bashIt();
 
 const setGenericApi = ({ project = 'shared', route }) => {
