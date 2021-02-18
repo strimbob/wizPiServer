@@ -1,0 +1,46 @@
+{
+  "name": "stomp",
+  "version": "0.0.3",
+  "urls": [
+    "https://vast-tor-87559.herokuapp.com/ ",
+    " https://git.heroku.com/vast-tor-87559.git"
+  ],
+  "description": "A generic backend, for all projects",
+  "main": "index.js",
+  "scripts": {
+    "start": "set NODE_ENV=production &&  nodemon --exec babel-node src/index.js",
+    "build": "npm run build-babel",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ben lycett",
+  "license": "ISC",
+  "engines": {
+    "node": "10.x"
+  },
+  "dependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/node": "^7.12.6",
+    "@babel/preset-env": "^7.12.1",
+    "@paypal/checkout-server-sdk": "^1.0.2",
+    "@swimlane/rql-to-mongo": "^1.0.0",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "byline": "^5.0.0",
+    "cors": "^2.8.5",
+    "deepmerge": "^4.2.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "immutable": "^4.0.0-rc.12",
+    "jwks-rsa": "^1.11.0",
+    "lodash": "^4.17.20",
+    "node-cache": "^5.1.2",
+    "node-fetch": "^2.6.1",
+    "node-mailjet": "^3.3.1",
+    "nodemon": "^2.0.6",
+    "request": "^2.88.2",
+    "rql": "^0.3.3",
+    "sib-api-v3-sdk": "^8.0.2",
+    "zlib": "^1.0.5"
+  }
+}
